@@ -1,0 +1,15 @@
+fn main():
+    let a = 3   # let contsant imutable at runtime  
+    alias b = 3 # var variable
+    var c = 3   # alias imutable at compiletime
+    c = 2
+
+    # string, integer & unit, float, bool  // basic data types
+    let d: String = ''
+    
+    let e: Int = 1 # Int8, Int16, Int32, Int64, UInt8, UInt16, UInt32, UInt64
+    
+    let f = 0.4
+    let g: Float16 = 0.4 # Float16, Float32, Float64
+
+    let h: Bool = True

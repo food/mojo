@@ -1,0 +1,7 @@
+fn addNumbers(a: Int, b: Int) -> Int:
+    let c: Int = a + b
+    return c
+
+fn main():
+    let x: Int = addNumbers(1,4)
+    print(x)

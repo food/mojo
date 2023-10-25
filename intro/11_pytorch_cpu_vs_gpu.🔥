@@ -1,0 +1,44 @@
+from python import Python
+
+# from time import now
+
+
+fn main() raises:
+    let torch = Python.import_module("torch")
+    let time = Python.import_module("time")
+
+    let device = "cuda" if torch.cuda.is_available() else "cpu"
+    print(device)
+
+    # define the size of the matrix
+    let size = (1000, 100, 100, 100)
+
+    # create random 3D tensor for CPU
+    let A_cpu = torch.randn(size)
+    let B_cpu = torch.randn(size)
+
+    # create random 3D tensor for CUDA (GPU)
+    let A_cuda = A_cpu.cuda()
+    let B_cuda = B_cpu.cuda()
+
+    # time the CPU computation
+    var satr_time = time.time()
+    let result_cpu = torch.matmul(A_cpu, B_cpu)
+    var end_time = time.time()
+    print("CPU TIME: ", end_time - satr_time, "seconds")
+
+    # time the CUDA computation
+    satr_time = time.time()
+    let result_cuda = torch.matmul(A_cuda, B_cuda)
+    end_time = time.time()
+    print("CUDA TIME: ", end_time - satr_time, "seconds")
+
+
+##
+# mojo 11_pytorch_cpu_vs_gpu.🔥
+# CPU TIME:  40.2341947555542 seconds
+# CUDA TIME:  5.331431865692139 seconds
+#
+# mojo build 11_pytorch_cpu_vs_gpu.🔥
+# ./11_pytorch_cpu_vs_gpu # not working on WSL
+#

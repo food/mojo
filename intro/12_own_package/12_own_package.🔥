@@ -1,0 +1,6 @@
+from testpack.mymodule import MyPair
+
+
+fn main():
+    let mine = MyPair(3, 5)
+    mine.dump()

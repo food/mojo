@@ -1,0 +1,24 @@
+struct Banana:
+    var Rype: Bool
+    var Length: Float32
+    var Color: String
+
+    fn __init__(inout self, Rype: Bool, Length: Float32, Color:String):
+        self.Rype = Rype
+        self.Length = Length
+        self.Color = Color
+
+    fn rype(self) -> Bool:
+        return self.Rype
+
+    fn length(self) -> Float32:
+        return self.Length
+
+    fn color (self) -> String:
+        return self.Color
+
+
+fn main():
+    let banana = Banana(False, 4.7, 'yellow')
+    print(banana.rype())
+    print(banana.color())

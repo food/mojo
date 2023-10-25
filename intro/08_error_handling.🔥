@@ -1,0 +1,13 @@
+from python import Python
+
+
+fn main() raises:
+    try:
+        print("open file")
+        raise Error()  # throw erro by my self
+
+    except:  # exception
+        raise Error("encoding in messy")
+
+    finally:  # final stuff
+        print("close file")

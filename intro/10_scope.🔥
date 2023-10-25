@@ -1,0 +1,5 @@
+let x = 3  # file scope
+
+
+fn main():
+    let y = 4  # local scope

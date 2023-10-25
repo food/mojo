@@ -1,0 +1,12 @@
+fn add[
+    datatype: DType, length: Int
+](a: SIMD[datatype, length], b: SIMD[datatype, length]) -> SIMD[datatype, length]:
+    return a + b
+
+
+fn main():
+    let x = SIMD[DType.float16, 4](1, 4, 9, 16)  # single instruction multiple data
+    print(x * 2)
+    print(x.__len__())
+
+    print(add(x, x))

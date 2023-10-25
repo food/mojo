@@ -1,0 +1,22 @@
+# inout make the var changeble and is a calling by reference!
+fn add_numbers_inout(inout a: Int8, b: Int8) -> Int8:
+    a = 55
+    return a + b
+
+
+fn add_numbers_borrow(borrowed a: Int8, b: Int8) -> Int8:
+    # a = 55 borrowed is setting a to const for this scope
+    return a + b
+
+
+fn add_numbers_owned(a: Int8, owned b: Int8) -> Int8:
+    b = 55  # allows to do everything with the variable
+    return a + b
+
+
+fn main():
+    var a: Int8 = 4
+    let b: Int8 = 5
+    print(add_numbers_inout(a, b))
+    print(add_numbers_borrow(a, b))
+    print(add_numbers_owned(a, b))

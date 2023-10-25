@@ -1,0 +1,23 @@
+from python import PythonObject
+
+fn main() raises:
+    # for, while
+    for i in range(10):
+        print(i)
+
+    var x: Int8 = 9
+    while x > 0:
+        x -=1
+         print(x)
+
+
+    while True:
+        x +=1
+         print(x)
+        if x > 10:
+            break
+
+    let z: PythonObject = [2, 4, 6, 8, 10]
+    print(z[3])
+    for i in range(z.__len__()):
+        print(i)
